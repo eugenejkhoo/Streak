@@ -76,6 +76,19 @@ Why layers and not one action:
 - **Third wheel.** Let a third person join as a "godparent" who can send treats but does not feed. Low-cost virality without breaking the pair rule.
 - **Silent days.** A pair can declare a holiday (max 7 days per quarter). Streak freezes, creature goes on its own trip, sends postcards. Duolingo-grade protection with story attached.
 
+### 2.6 Mini-games: no in v1, maybe later in one form
+
+Pengu levelled the penguin through mini-games and reviewers rated them "7.5/10 because they earn coins." Finch has none and is the category breakout. A mini-game minute is a minute not spent on the real-world habit, and the creature must not reward that.
+
+- **Never as a feed.** Growth and streak days come only from Layer 1.
+- **Not in v1.** Each game is its own small product. Too expensive for the retention it buys.
+- **Later, only as pair-only asynchronous micro-games inside the Bond layer**, 30 seconds, max once a day, rewarding vitality or cosmetic tokens:
+  - Guess their answer: both answer a question, then guess the other's. Reveal when both done. First candidate, cheapest, doubles as a better bonding prompt.
+  - Draw it, they guess. Alternate days.
+  - Same-second tap: both hold a button at the same moment. Occasional event only.
+  - Expedition minis: a weekly co-op puzzle as the mechanic inside Layer 3, not a games tab.
+- **Decision trigger.** Revisit after D30 data. High Bond completion means no games needed. Low means try "guess their answer" first.
+
 ---
 
 ## 3. The creature: rarity and vitality, borrowed from Pokémon cards and Labubu
