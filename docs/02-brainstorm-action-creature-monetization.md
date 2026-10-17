@@ -235,3 +235,38 @@ At 50K active pairs that is roughly $40K to $60K a month, which is already Pengu
 6. **Name.** "Streak" is the repo. The app needs a name that says "together" more than "streak".
 
 Next doc once these are set: screen-by-screen spec, the day-resolution and vitality algorithms with worked examples, and the data model for pairs, feeds, creatures and seasons.
+
+---
+
+## Addendum 2026-10-17: decisions and remaining suggestions
+
+Confirmed by Eugene: Crew and Couple modes; Feed / Bond / Expedition with Apple Health auto-feed in v1; seasonal sets, hatch rarity, vitality branching, graduation at 100; Pair Plus + restore + capsules, no ads, no creature gacha. Mini-games deferred per 2.6.
+
+### Mascot candidates
+
+Constraints: reads at widget size, ageless and sexless, animates cheaply in 2D, not a penguin, carries the "two of us" idea.
+
+| Candidate | For | Against |
+|---|---|---|
+| **Sea otter** (recommended) | Otters hold hands while sleeping so they do not drift apart. That fact is the entire brand in one sentence. Round head, whiskers and paws read at 40px. Universally liked, not yet a meme. Wrapping in kelp gives a free visual for shields and naps. A group of otters is called a raft. | More animal-shaped than blob-shaped, so the rig is a bit more work. |
+| Axolotl | Regenerates, which matches "nothing dies, only pauses". Pink with gill fronds reads at small size. Big with 16 to 25. | Already everywhere in merch and Minecraft. Hard to own. |
+| Moss or seed sprite | Literally grows. Seasonal sets map to plants naturally. | Plants are hard to make emotive. Plant Nanny and Forest own the space. |
+| Abstract blob or ghost | Cheapest to animate, infinitely skinnable. | Cold. No metaphor. Bao in Born's app is already a blob. |
+| Capybara | Peak cute, social animal. | Meme fatigue, brown blob at widget size. |
+
+Pick the otter as the common species in every set. Logo: two otters holding paws, or one otter wrapped in kelp. The other three Set 1 species can be other coastal animals so the habitat is a tidepool: a hermit crab (uncommon), a sea slug nudibranch (rare, naturally wild colors), a tiny whale or manta (legendary).
+
+### Name candidates
+
+All need a trademark and App Store search before committing. Not checked here.
+
+| Name | Why | Risk |
+|---|---|---|
+| **Raft** (recommended) | A raft is a group of otters holding on to each other. Short, one syllable, says "we stay together", pairs with the mascot without being a pun. Clean icon. | Generic word, so searchability depends on brand. Check for conflicts in Social and Health categories. |
+| Kelp | What otters wrap in so they do not drift. Cute, memorable, unusual. | Slightly obscure, sounds like a food app to some. |
+| Holdfast | The anchor of kelp, and literally "hold firmly". Strong meaning. | Two syllables, a little serious for a cute app. |
+| Both | Direct, bold, confident. "Did you both?" | Impossible to search, likely conflicts. |
+| Tandem | Perfect meaning. | Tandem is a large language-exchange app. Avoid. |
+| Tether | Connected across distance. Good for long-distance couples. | Tether is a crypto stablecoin. Avoid. |
+
+Tagline either way: **"A creature you can only raise together."**
