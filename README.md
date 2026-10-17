@@ -15,7 +15,12 @@ A creature you can only raise together. Two people, one creature. It grows only 
 | `supabase/seed.sql` | Set 1 "Tidepool" species |
 | `supabase/functions/_shared/localDay.ts` | 03:00 local-day boundary, pair-day windows across time zones |
 | `supabase/functions/_shared/resolve.ts` | Day resolution, streaks, shields, restore, hibernation, vitality, stages, adult form, hatch roll |
-| `supabase/functions/resolve-pair-days/` | Hourly edge function that applies the above |
+| `supabase/functions/_shared/invite.ts` | Invite tokens, 7-day expiry, join rules |
+| `supabase/functions/_shared/feeds.ts` | Feed validation: source vs habit kind, Health thresholds, photo rule, duplicate and time-zone trust |
+| `supabase/functions/_shared/notifications.ts` | Push caps, quiet hours, creature-voiced copy |
+| `supabase/functions/resolve-pair-days/` | Hourly edge function that applies the resolution logic |
+| `supabase/functions/{create-pair,join-pair,log-feed}/` | Edge functions for pairing and feeding |
+| `ios/` | SwiftUI app, WidgetKit extension and the shared `RaftKit` package (XcodeGen spec, not yet compiled) |
 | `tests/` | Node test suites for the domain logic |
 
 ## Running

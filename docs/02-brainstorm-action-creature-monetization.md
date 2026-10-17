@@ -289,3 +289,17 @@ Asked for names that sound good and roll off the tongue. One or two syllables, s
 Ranking by sound plus meaning: Raft, Tend, Pebble, Kelp, Nuzzle. If Raft fails clearance, take Tend.
 
 Default creature name for the mascot otter: **Pip**. One syllable, works in every sentence the creature says.
+
+### Name clearance, first pass (App Store search only, not trademark)
+
+| Name | Finding | Verdict |
+|---|---|---|
+| Raft | "Raft: Shared calendar" by Join Raft AB is a live couples app with 400+ ratings. Same audience, same store. | Conflict. Drop unless you want to fight it. |
+| Tend | Three live apps already use it in this exact space: Tend Task (couples household), Tend+ (relationship reminders), Tend: Couples & Relationships (daily prompts with "connection streaks", released June 2026). | Crowded. Drop. |
+| Nuzzle | "Nuzzle – dating and chat" and "Nuzzle - AI Warm Virtual Pets" both live. | Conflict. Drop. |
+| Pebble | Smartwatch brand, revived 2025. Different category, strong mark. | Risky. |
+| Kelp | No App Store hit for an app called Kelp in habit, social or couples. | **Cleanest of the five.** Run a USPTO and EUIPO search next. |
+
+Also seen while searching, worth knowing: FurTwo (couples virtual pet), Pookie and Nestly (couples widgets), WeComplete (couples habits with streaks), Groovy (build habits together). None combine a shared creature with a both-must-feed rule, but the niche is filling in during 2026. Speed matters.
+
+Working name moves to **Kelp** pending trademark search. Repo, bundle IDs and the `raft.app` link domain in the iOS skeleton are placeholders and rename in one pass once the name is final.

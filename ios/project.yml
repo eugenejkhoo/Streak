@@ -1,0 +1,75 @@
+# XcodeGen spec. On a Mac: brew install xcodegen && cd ios && xcodegen generate && open Raft.xcodeproj
+name: Raft
+options:
+  bundleIdPrefix: app.raft
+  deploymentTarget:
+    iOS: "17.0"
+  xcodeVersion: "16.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.10"
+    DEVELOPMENT_TEAM: ""            # fill in
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+packages:
+  RaftKit:
+    path: Packages/RaftKit
+configs:
+  Debug: debug
+  Release: release
+targets:
+  Raft:
+    type: application
+    platform: iOS
+    sources: [Raft]
+    dependencies:
+      - package: RaftKit
+      - target: RaftWidget
+        embed: true
+        codeSign: true
+    entitlements:
+      path: Raft/Raft.entitlements
+      properties:
+        com.apple.developer.applesignin: [Default]
+        com.apple.developer.healthkit: true
+        com.apple.developer.healthkit.background-delivery: true
+        com.apple.security.application-groups: [group.app.raft.shared]
+        com.apple.developer.associated-domains: [applinks:raft.app]
+        aps-environment: development
+    info:
+      path: Raft/Info.plist
+      properties:
+        CFBundleDisplayName: Raft
+        UILaunchScreen: {}
+        NSHealthShareUsageDescription: Raft reads workouts, steps, sleep and mindful minutes to feed your creature automatically when you hit your habit.
+        NSHealthUpdateUsageDescription: Raft does not write to Health.
+        NSCameraUsageDescription: Attach a proof photo to today's feed.
+        NSPhotoLibraryUsageDescription: Choose a photo for today's feed.
+        UIBackgroundModes: [remote-notification]
+        RAFT_SUPABASE_URL: $(RAFT_SUPABASE_URL)
+        RAFT_SUPABASE_ANON_KEY: $(RAFT_SUPABASE_ANON_KEY)
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.raft.ios
+        RAFT_SUPABASE_URL: https://YOUR-PROJECT.supabase.co
+        RAFT_SUPABASE_ANON_KEY: YOUR-ANON-KEY
+  RaftWidget:
+    type: app-extension
+    platform: iOS
+    sources: [RaftWidget]
+    dependencies:
+      - package: RaftKit
+    entitlements:
+      path: RaftWidget/RaftWidget.entitlements
+      properties:
+        com.apple.security.application-groups: [group.app.raft.shared]
+    info:
+      path: RaftWidget/Info.plist
+      properties:
+        CFBundleDisplayName: Raft
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.raft.ios.widget
