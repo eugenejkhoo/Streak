@@ -3,720 +3,840 @@
     "mode": "crew",
     "pack": "plan",
     "text": "What's the one thing you have to do today, no matter what?",
-    "active": true
+    "active": true,
+    "sort": 0
   },
   {
     "mode": "crew",
     "pack": "plan",
     "text": "When exactly are you doing your habit today? Give me a time.",
-    "active": true
+    "active": true,
+    "sort": 1
   },
   {
     "mode": "crew",
     "pack": "plan",
     "text": "What's most likely to get in the way today?",
-    "active": true
+    "active": true,
+    "sort": 2
   },
   {
     "mode": "crew",
     "pack": "plan",
     "text": "What's your excuse going to be if you skip? Say it out loud now.",
-    "active": true
+    "active": true,
+    "sort": 3
   },
   {
     "mode": "crew",
     "pack": "plan",
     "text": "Rate your energy right now, 1 to 10, and why.",
-    "active": true
+    "active": true,
+    "sort": 4
   },
   {
     "mode": "crew",
     "pack": "plan",
     "text": "What's the smallest version of your habit you'd accept today?",
-    "active": true
+    "active": true,
+    "sort": 5
   },
   {
     "mode": "crew",
     "pack": "plan",
     "text": "Who or what do you need to say no to today?",
-    "active": true
+    "active": true,
+    "sort": 6
   },
   {
     "mode": "crew",
     "pack": "plan",
     "text": "What's one thing you're doing today that future you will thank you for?",
-    "active": true
+    "active": true,
+    "sort": 7
   },
   {
     "mode": "crew",
     "pack": "plan",
     "text": "If today goes perfectly, what did it look like at 9pm?",
-    "active": true
+    "active": true,
+    "sort": 8
   },
   {
     "mode": "crew",
     "pack": "plan",
     "text": "What's the first thing you're doing after you put the phone down?",
-    "active": true
+    "active": true,
+    "sort": 9
   },
   {
     "mode": "crew",
     "pack": "plan",
     "text": "What are you avoiding right now?",
-    "active": true
+    "active": true,
+    "sort": 10
   },
   {
     "mode": "crew",
     "pack": "plan",
     "text": "What's one thing you'll do today that you didn't do yesterday?",
-    "active": true
+    "active": true,
+    "sort": 11
   },
   {
     "mode": "crew",
     "pack": "plan",
     "text": "What do you need from your crewmate this week?",
-    "active": true
+    "active": true,
+    "sort": 12
   },
   {
     "mode": "crew",
     "pack": "plan",
     "text": "What's a 10-minute thing you keep postponing?",
-    "active": true
+    "active": true,
+    "sort": 13
   },
   {
     "mode": "crew",
     "pack": "plan",
     "text": "Name the hour today you're most likely to crack.",
-    "active": true
+    "active": true,
+    "sort": 14
   },
   {
     "mode": "crew",
     "pack": "plan",
     "text": "What would make today a win even if everything else goes wrong?",
-    "active": true
+    "active": true,
+    "sort": 15
   },
   {
     "mode": "crew",
     "pack": "plan",
     "text": "What's your reward for showing up today?",
-    "active": true
+    "active": true,
+    "sort": 16
   },
   {
     "mode": "crew",
     "pack": "plan",
     "text": "What's on your mind that has nothing to do with today's goal?",
-    "active": true
+    "active": true,
+    "sort": 17
   },
   {
     "mode": "crew",
     "pack": "plan",
     "text": "Pick one word for how you want to feel tonight.",
-    "active": true
+    "active": true,
+    "sort": 18
   },
   {
     "mode": "crew",
     "pack": "plan",
     "text": "What's one thing you're going to stop doing today?",
-    "active": true
+    "active": true,
+    "sort": 19
   },
   {
     "mode": "crew",
     "pack": "reflect",
     "text": "Did you do the thing? How did it actually feel?",
-    "active": true
+    "active": true,
+    "sort": 0
   },
   {
     "mode": "crew",
     "pack": "reflect",
     "text": "What was the hardest moment of today, and what did you do?",
-    "active": true
+    "active": true,
+    "sort": 1
   },
   {
     "mode": "crew",
     "pack": "reflect",
     "text": "What did you do today that nobody saw?",
-    "active": true
+    "active": true,
+    "sort": 2
   },
   {
     "mode": "crew",
     "pack": "reflect",
     "text": "What would you do differently if today reran?",
-    "active": true
+    "active": true,
+    "sort": 3
   },
   {
     "mode": "crew",
     "pack": "reflect",
     "text": "What's something small that went right today?",
-    "active": true
+    "active": true,
+    "sort": 4
   },
   {
     "mode": "crew",
     "pack": "reflect",
     "text": "How close did you come to skipping, honestly?",
-    "active": true
+    "active": true,
+    "sort": 5
   },
   {
     "mode": "crew",
     "pack": "reflect",
     "text": "What did you learn about yourself today?",
-    "active": true
+    "active": true,
+    "sort": 6
   },
   {
     "mode": "crew",
     "pack": "reflect",
     "text": "What did you waste time on today? No judgment.",
-    "active": true
+    "active": true,
+    "sort": 7
   },
   {
     "mode": "crew",
     "pack": "reflect",
     "text": "What's the one thing you're proud of from today?",
-    "active": true
+    "active": true,
+    "sort": 8
   },
   {
     "mode": "crew",
     "pack": "reflect",
     "text": "Who helped you today, even a little?",
-    "active": true
+    "active": true,
+    "sort": 9
   },
   {
     "mode": "crew",
     "pack": "reflect",
     "text": "What did you eat that you'd rather not tell me about?",
-    "active": true
+    "active": true,
+    "sort": 10
   },
   {
     "mode": "crew",
     "pack": "reflect",
     "text": "What time did you actually start, versus when you said you would?",
-    "active": true
+    "active": true,
+    "sort": 11
   },
   {
     "mode": "crew",
     "pack": "reflect",
     "text": "What are you letting go of before you sleep?",
-    "active": true
+    "active": true,
+    "sort": 12
   },
   {
     "mode": "crew",
     "pack": "reflect",
     "text": "What did you say yes to that you should have said no to?",
-    "active": true
+    "active": true,
+    "sort": 13
   },
   {
     "mode": "crew",
     "pack": "reflect",
     "text": "What surprised you today?",
-    "active": true
+    "active": true,
+    "sort": 14
   },
   {
     "mode": "crew",
     "pack": "reflect",
     "text": "On a scale of 1 to 10, how was today, and what would make it one point higher?",
-    "active": true
+    "active": true,
+    "sort": 15
   },
   {
     "mode": "crew",
     "pack": "reflect",
     "text": "What's something you're still carrying from today?",
-    "active": true
+    "active": true,
+    "sort": 16
   },
   {
     "mode": "crew",
     "pack": "reflect",
     "text": "What did you notice about your crewmate today?",
-    "active": true
+    "active": true,
+    "sort": 17
   },
   {
     "mode": "crew",
     "pack": "reflect",
     "text": "What did you do today just for you?",
-    "active": true
+    "active": true,
+    "sort": 18
   },
   {
     "mode": "crew",
     "pack": "reflect",
     "text": "What's tomorrow's first move?",
-    "active": true
+    "active": true,
+    "sort": 19
   },
   {
     "mode": "crew",
     "pack": "honest",
     "text": "What's the real reason you started this habit?",
-    "active": true
+    "active": true,
+    "sort": 0
   },
   {
     "mode": "crew",
     "pack": "honest",
     "text": "What's the lie you tell yourself most often about this goal?",
-    "active": true
+    "active": true,
+    "sort": 1
   },
   {
     "mode": "crew",
     "pack": "honest",
     "text": "How long do you think this streak will actually last? Be honest.",
-    "active": true
+    "active": true,
+    "sort": 2
   },
   {
     "mode": "crew",
     "pack": "honest",
     "text": "What would you tell your crewmate if they skipped tomorrow?",
-    "active": true
+    "active": true,
+    "sort": 3
   },
   {
     "mode": "crew",
     "pack": "honest",
     "text": "What's harder than you thought it would be?",
-    "active": true
+    "active": true,
+    "sort": 4
   },
   {
     "mode": "crew",
     "pack": "honest",
     "text": "What are you doing that's secretly making this harder?",
-    "active": true
+    "active": true,
+    "sort": 5
   },
   {
     "mode": "crew",
     "pack": "honest",
     "text": "When was the last time you half-did your habit and counted it anyway?",
-    "active": true
+    "active": true,
+    "sort": 6
   },
   {
     "mode": "crew",
     "pack": "honest",
     "text": "What are you actually afraid will happen if you stop?",
-    "active": true
+    "active": true,
+    "sort": 7
   },
   {
     "mode": "crew",
     "pack": "honest",
     "text": "What's the thing you'd be embarrassed to admit you still haven't started?",
-    "active": true
+    "active": true,
+    "sort": 8
   },
   {
     "mode": "crew",
     "pack": "honest",
     "text": "If I could see your screen time today, what would I see?",
-    "active": true
+    "active": true,
+    "sort": 9
   },
   {
     "mode": "crew",
     "pack": "honest",
     "text": "What would a stricter version of you say about this week?",
-    "active": true
+    "active": true,
+    "sort": 10
   },
   {
     "mode": "crew",
     "pack": "honest",
     "text": "Who would be most surprised that you're still doing this?",
-    "active": true
+    "active": true,
+    "sort": 11
   },
   {
     "mode": "crew",
     "pack": "honest",
     "text": "What's a habit you dropped that you still think about?",
-    "active": true
+    "active": true,
+    "sort": 12
   },
   {
     "mode": "crew",
     "pack": "honest",
     "text": "What do you do when you're alone that you'd never do with your crewmate watching?",
-    "active": true
+    "active": true,
+    "sort": 13
   },
   {
     "mode": "crew",
     "pack": "honest",
     "text": "When did you last quit something, and was it the right call?",
-    "active": true
+    "active": true,
+    "sort": 14
   },
   {
     "mode": "crew",
     "pack": "honest",
     "text": "Which part of the habit do you actually enjoy, if any?",
-    "active": true
+    "active": true,
+    "sort": 15
   },
   {
     "mode": "crew",
     "pack": "honest",
     "text": "What would make you quit this pair?",
-    "active": true
+    "active": true,
+    "sort": 16
   },
   {
     "mode": "crew",
     "pack": "honest",
     "text": "What's one thing you've been pretending is fine?",
-    "active": true
+    "active": true,
+    "sort": 17
   },
   {
     "mode": "crew",
     "pack": "honest",
     "text": "What's the best excuse you've ever used?",
-    "active": true
+    "active": true,
+    "sort": 18
   },
   {
     "mode": "crew",
     "pack": "honest",
     "text": "What are you proud of that you've never said out loud?",
-    "active": true
+    "active": true,
+    "sort": 19
   },
   {
     "mode": "crew",
     "pack": "hype",
     "text": "Send your crewmate one line to get them through today.",
-    "active": true
+    "active": true,
+    "sort": 0
   },
   {
     "mode": "crew",
     "pack": "hype",
     "text": "What's the song that gets you to do the thing?",
-    "active": true
+    "active": true,
+    "sort": 1
   },
   {
     "mode": "crew",
     "pack": "hype",
     "text": "Describe your crewmate in three words when they're at their best.",
-    "active": true
+    "active": true,
+    "sort": 2
   },
   {
     "mode": "crew",
     "pack": "hype",
     "text": "What's a win from this week that deserves more credit?",
-    "active": true
+    "active": true,
+    "sort": 3
   },
   {
     "mode": "crew",
     "pack": "hype",
     "text": "What are you going to look like at day 100?",
-    "active": true
+    "active": true,
+    "sort": 4
   },
   {
     "mode": "crew",
     "pack": "hype",
     "text": "What's the best thing about having a crewmate on this?",
-    "active": true
+    "active": true,
+    "sort": 5
   },
   {
     "mode": "crew",
     "pack": "hype",
     "text": "What will you do to celebrate the next milestone?",
-    "active": true
+    "active": true,
+    "sort": 6
   },
   {
     "mode": "crew",
     "pack": "hype",
     "text": "Send a photo of where you're doing your habit today.",
-    "active": true
+    "active": true,
+    "sort": 7
   },
   {
     "mode": "crew",
     "pack": "hype",
     "text": "Who's your role model for this habit, and why?",
-    "active": true
+    "active": true,
+    "sort": 8
   },
   {
     "mode": "crew",
     "pack": "hype",
     "text": "What's one thing your crewmate does better than you?",
-    "active": true
+    "active": true,
+    "sort": 9
   },
   {
     "mode": "crew",
     "pack": "hype",
     "text": "Finish this: \"By the end of this month I will have...\"",
-    "active": true
+    "active": true,
+    "sort": 10
   },
   {
     "mode": "crew",
     "pack": "hype",
     "text": "What's the compliment you'd most like to hear right now?",
-    "active": true
+    "active": true,
+    "sort": 11
   },
   {
     "mode": "crew",
     "pack": "hype",
     "text": "What's a moment this week you felt unstoppable?",
-    "active": true
+    "active": true,
+    "sort": 12
   },
   {
     "mode": "crew",
     "pack": "hype",
     "text": "Describe your energy today as a weather report.",
-    "active": true
+    "active": true,
+    "sort": 13
   },
   {
     "mode": "crew",
     "pack": "hype",
     "text": "What's the next thing you're going to get good at?",
-    "active": true
+    "active": true,
+    "sort": 14
   },
   {
     "mode": "crew",
     "pack": "hype",
     "text": "What's your personal best so far, in anything?",
-    "active": true
+    "active": true,
+    "sort": 15
   },
   {
     "mode": "crew",
     "pack": "hype",
     "text": "Make up a team name for the two of you.",
-    "active": true
+    "active": true,
+    "sort": 16
   },
   {
     "mode": "crew",
     "pack": "hype",
     "text": "What's a tiny thing you did today that counts more than it looks?",
-    "active": true
+    "active": true,
+    "sort": 17
   },
   {
     "mode": "crew",
     "pack": "hype",
     "text": "Tell your crewmate why they'll make it.",
-    "active": true
+    "active": true,
+    "sort": 18
   },
   {
     "mode": "crew",
     "pack": "hype",
     "text": "What would the version of you from a year ago say about today?",
-    "active": true
+    "active": true,
+    "sort": 19
   },
   {
     "mode": "crew",
     "pack": "crewmate",
     "text": "What's a habit of your crewmate's that you want to steal?",
-    "active": true
+    "active": true,
+    "sort": 0
   },
   {
     "mode": "crew",
     "pack": "crewmate",
     "text": "What do you think your crewmate's biggest strength is?",
-    "active": true
+    "active": true,
+    "sort": 1
   },
   {
     "mode": "crew",
     "pack": "crewmate",
     "text": "When did your crewmate last impress you?",
-    "active": true
+    "active": true,
+    "sort": 2
   },
   {
     "mode": "crew",
     "pack": "crewmate",
     "text": "What's something you still don't know about your crewmate?",
-    "active": true
+    "active": true,
+    "sort": 3
   },
   {
     "mode": "crew",
     "pack": "crewmate",
     "text": "How do you think your crewmate handles a bad day?",
-    "active": true
+    "active": true,
+    "sort": 4
   },
   {
     "mode": "crew",
     "pack": "crewmate",
     "text": "What would your crewmate say is your worst excuse?",
-    "active": true
+    "active": true,
+    "sort": 5
   },
   {
     "mode": "crew",
     "pack": "crewmate",
     "text": "Guess your crewmate's favourite time of day to do their habit.",
-    "active": true
+    "active": true,
+    "sort": 6
   },
   {
     "mode": "crew",
     "pack": "crewmate",
     "text": "What's something your crewmate says all the time?",
-    "active": true
+    "active": true,
+    "sort": 7
   },
   {
     "mode": "crew",
     "pack": "crewmate",
     "text": "What's one thing you'd want to do with your crewmate outside this app?",
-    "active": true
+    "active": true,
+    "sort": 8
   },
   {
     "mode": "crew",
     "pack": "crewmate",
     "text": "What's your crewmate's superpower?",
-    "active": true
+    "active": true,
+    "sort": 9
   },
   {
     "mode": "crew",
     "pack": "crewmate",
     "text": "What would your crewmate's walk-up song be?",
-    "active": true
+    "active": true,
+    "sort": 10
   },
   {
     "mode": "crew",
     "pack": "crewmate",
     "text": "What's something you admire that your crewmate doesn't realise about themselves?",
-    "active": true
+    "active": true,
+    "sort": 11
   },
   {
     "mode": "crew",
     "pack": "crewmate",
     "text": "If your crewmate wrote a book, what's the title?",
-    "active": true
+    "active": true,
+    "sort": 12
   },
   {
     "mode": "crew",
     "pack": "crewmate",
     "text": "What's a thing your crewmate complains about that's actually funny?",
-    "active": true
+    "active": true,
+    "sort": 13
   },
   {
     "mode": "crew",
     "pack": "crewmate",
     "text": "Guess what your crewmate had for breakfast.",
-    "active": true
+    "active": true,
+    "sort": 14
   },
   {
     "mode": "crew",
     "pack": "crewmate",
     "text": "What's the best advice your crewmate has given you?",
-    "active": true
+    "active": true,
+    "sort": 15
   },
   {
     "mode": "crew",
     "pack": "crewmate",
     "text": "How did you two actually meet? Tell the short version.",
-    "active": true
+    "active": true,
+    "sort": 16
   },
   {
     "mode": "crew",
     "pack": "crewmate",
     "text": "What's your crewmate's go-to comfort food?",
-    "active": true
+    "active": true,
+    "sort": 17
   },
   {
     "mode": "crew",
     "pack": "crewmate",
     "text": "What's one thing you'd never want to compete with your crewmate at?",
-    "active": true
+    "active": true,
+    "sort": 18
   },
   {
     "mode": "crew",
     "pack": "crewmate",
     "text": "What do you hope your crewmate gets out of this?",
-    "active": true
+    "active": true,
+    "sort": 19
   },
   {
     "mode": "crew",
     "pack": "wildcard",
     "text": "Photo of your view right now.",
-    "active": true
+    "active": true,
+    "sort": 0
   },
   {
     "mode": "crew",
     "pack": "wildcard",
     "text": "What's the last thing you laughed at?",
-    "active": true
+    "active": true,
+    "sort": 1
   },
   {
     "mode": "crew",
     "pack": "wildcard",
     "text": "Describe your week in one emoji.",
-    "active": true
+    "active": true,
+    "sort": 2
   },
   {
     "mode": "crew",
     "pack": "wildcard",
     "text": "What did you almost buy today and didn't?",
-    "active": true
+    "active": true,
+    "sort": 3
   },
   {
     "mode": "crew",
     "pack": "wildcard",
     "text": "What's a smell that brings back a memory?",
-    "active": true
+    "active": true,
+    "sort": 4
   },
   {
     "mode": "crew",
     "pack": "wildcard",
     "text": "What's one thing in your bag or pocket right now that's odd?",
-    "active": true
+    "active": true,
+    "sort": 5
   },
   {
     "mode": "crew",
     "pack": "wildcard",
     "text": "What's your controversial food opinion?",
-    "active": true
+    "active": true,
+    "sort": 6
   },
   {
     "mode": "crew",
     "pack": "wildcard",
     "text": "What's the last thing you searched online?",
-    "active": true
+    "active": true,
+    "sort": 7
   },
   {
     "mode": "crew",
     "pack": "wildcard",
     "text": "If you had an extra hour today, what would you do with it?",
-    "active": true
+    "active": true,
+    "sort": 8
   },
   {
     "mode": "crew",
     "pack": "wildcard",
     "text": "What's a word you overuse?",
-    "active": true
+    "active": true,
+    "sort": 9
   },
   {
     "mode": "crew",
     "pack": "wildcard",
     "text": "Photo of your shoes today.",
-    "active": true
+    "active": true,
+    "sort": 10
   },
   {
     "mode": "crew",
     "pack": "wildcard",
     "text": "What's a skill you'd learn if it took one day?",
-    "active": true
+    "active": true,
+    "sort": 11
   },
   {
     "mode": "crew",
     "pack": "wildcard",
     "text": "What's the best thing you've eaten this week?",
-    "active": true
+    "active": true,
+    "sort": 12
   },
   {
     "mode": "crew",
     "pack": "wildcard",
     "text": "What's a small luxury you'd never give up?",
-    "active": true
+    "active": true,
+    "sort": 13
   },
   {
     "mode": "crew",
     "pack": "wildcard",
     "text": "What did you want to be when you were ten?",
-    "active": true
+    "active": true,
+    "sort": 14
   },
   {
     "mode": "crew",
     "pack": "wildcard",
     "text": "What's the oldest thing you own that you still use?",
-    "active": true
+    "active": true,
+    "sort": 15
   },
   {
     "mode": "crew",
     "pack": "wildcard",
     "text": "What's a rule you break on purpose?",
-    "active": true
+    "active": true,
+    "sort": 16
   },
   {
     "mode": "crew",
     "pack": "wildcard",
     "text": "Describe your current mood as an animal.",
-    "active": true
+    "active": true,
+    "sort": 17
   },
   {
     "mode": "crew",
     "pack": "wildcard",
     "text": "What's the weirdest thing in your camera roll? You don't have to send it.",
-    "active": true
+    "active": true,
+    "sort": 18
   },
   {
     "mode": "crew",
     "pack": "wildcard",
     "text": "Tell me something true that sounds fake.",
-    "active": true
+    "active": true,
+    "sort": 19
   }
 ]

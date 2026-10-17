@@ -6,8 +6,8 @@
 // deno-lint-ignore-file no-explicit-any
 import { createClient } from "npm:@supabase/supabase-js@2";
 import { calendarDateIn, localDateOf, pairDayIsClosed } from "../_shared/localDay.ts";
+import { syncExpedition } from "../_shared/expeditionSync.ts";
 import {
-  applyRestore as _applyRestore,
   datesBetween,
   expireAtRisk,
   resolvePairDay,
@@ -116,6 +116,8 @@ Deno.serve(async (_req) => {
       });
       resolved++;
     }
+
+    await syncExpedition(supabase, p.id, [members[0].user_id, members[1].user_id], earliestToday).catch(() => {});
 
     // Expire at-risk days whose window passed.
     if (state.atRiskUntil && now > state.atRiskUntil && state.atRiskDate) {

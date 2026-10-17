@@ -1,0 +1,367 @@
+<title>Kelp Prototype</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Layout: a phone frame on the left that behaves like the app, a simulator
+   panel on the right that plays both people and the passage of days. */
+:root{
+  --bg:#EEF5F2; --panel:#FFFFFF; --ink:#16313A; --muted:#5F7A83; --line:#D3E2DD;
+  --accent:#2E8C6A; --accent-ink:#FFFFFF; --flame:#E4702F; --shield:#4A7FB5; --risk:#C9452C;
+  --scene-a:#CFE9E2; --scene-b:#E9F4F0; --egg:#F3E7C9; --otter:#8A6440; --otter-light:#D9BB94;
+  --font:"Nunito",ui-rounded,"SF Pro Rounded",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0E1B20; --panel:#15262C; --ink:#E7F0ED; --muted:#93AAB0; --line:#25393F;
+  --accent:#4DBB93; --accent-ink:#0B1A14; --flame:#F08B55; --shield:#7AA6D8; --risk:#F07A62;
+  --scene-a:#193C3F; --scene-b:#122A2F; --egg:#E6D7B0; --otter:#9A7450; --otter-light:#E2C8A3; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#0E1B20; --panel:#15262C; --ink:#E7F0ED; --muted:#93AAB0; --line:#25393F;
+  --accent:#4DBB93; --accent-ink:#0B1A14; --flame:#F08B55; --shield:#7AA6D8; --risk:#F07A62;
+  --scene-a:#193C3F; --scene-b:#122A2F; --egg:#E6D7B0; --otter:#9A7450; --otter-light:#E2C8A3; color-scheme:dark }
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.45;
+  padding-block:20px 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{margin:0;text-wrap:balance;line-height:1.15}
+button{font:inherit;cursor:pointer}
+button:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;display:grid;gap:24px}
+header.top{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px}
+header.top h1{font-size:26px;font-weight:800;letter-spacing:-.01em}
+header.top p{margin:0;color:var(--muted);max-width:60ch}
+.stage{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:28px;align-items:start}
+@media (max-width:820px){.stage{grid-template-columns:1fr}}
+
+/* ---------- phone ---------- */
+.phone{width:min(100%,390px);aspect-ratio:390/800;max-width:100%;margin:0 auto;background:var(--panel);border:1px solid var(--line);
+  border-radius:44px;padding:14px;box-shadow:0 20px 50px -30px rgba(10,40,40,.45);position:relative;overflow:hidden;display:flex;flex-direction:column}
+.notch{width:110px;height:28px;background:var(--ink);border-radius:20px;margin:0 auto 6px;opacity:.9;flex:none}
+.screen{flex:1;min-height:0;display:flex;flex-direction:column;overflow:hidden;border-radius:30px}
+.screen>section{flex:1;min-height:0;overflow:auto;display:none;flex-direction:column;gap:12px;padding:8px 6px 12px}
+.screen>section.on{display:flex}
+.s-title{font-size:22px;font-weight:800}
+.lead{font-size:20px;font-weight:800;text-align:center;padding:0 10px}
+.center{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;flex:1}
+.btn{border:0;border-radius:14px;padding:13px 16px;font-weight:800;font-size:16px;background:var(--accent);color:var(--accent-ink);width:100%}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn.sub{background:transparent;color:var(--muted);font-weight:700;font-size:13px;padding:6px}
+.btn:disabled{opacity:.55;cursor:default}
+.mode{display:flex;gap:12px;align-items:center;border:1px solid var(--line);border-radius:16px;padding:12px;text-align:left;background:transparent;color:inherit;width:100%}
+.mode b{display:block;font-size:16px}.mode span{color:var(--muted);font-size:13px}
+.mode .ic{font-size:26px;width:38px;text-align:center}
+.card{border:1px solid var(--line);border-radius:16px;padding:12px 14px;display:grid;gap:6px;background:var(--panel)}
+.card h3{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:800}
+.card p{margin:0}
+.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.spacer{flex:1}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.muted{color:var(--muted)}
+.small{font-size:12px}
+
+/* scene */
+.scene{position:relative;border-radius:22px;background:linear-gradient(180deg,var(--scene-a),var(--scene-b));height:250px;flex:none;overflow:hidden;display:grid;place-items:center}
+.scene svg{width:200px;height:200px;max-width:100%;transition:transform .5s ease,filter .5s ease}
+.scene .cap{position:absolute;left:12px;bottom:10px;font-size:12px;color:var(--muted);font-weight:700}
+.scene .pill{position:absolute;right:12px;top:10px;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:4px 8px;border-radius:99px;background:var(--panel);color:var(--muted);border:1px solid var(--line)}
+.scene.glowing svg{filter:drop-shadow(0 0 18px rgba(255,220,120,.9))}
+.scene.bright svg{filter:drop-shadow(0 6px 14px rgba(0,0,0,.18))}
+.scene.droopy svg{transform:rotate(-6deg) translateY(10px) scale(.92);filter:saturate(.6)}
+.scene .zzz{position:absolute;right:30%;top:26%;font-weight:800;color:var(--muted);font-size:20px;animation:float 2.4s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0);opacity:.6}50%{transform:translateY(-8px);opacity:1}}
+@keyframes wobble{0%,100%{transform:rotate(0)}20%{transform:rotate(-9deg)}40%{transform:rotate(8deg)}60%{transform:rotate(-6deg)}80%{transform:rotate(5deg)}}
+.wobble svg{animation:wobble .9s ease-in-out 2}
+.residents{position:absolute;left:10px;top:10px;display:flex;gap:4px}
+.residents svg{width:34px;height:34px}
+@media (prefers-reduced-motion:reduce){.wobble svg,.scene .zzz{animation:none}}
+
+/* today strip */
+.strip{display:flex;align-items:center;gap:12px}
+.av{display:grid;place-items:center;gap:3px;font-size:11px;color:var(--muted);font-weight:700}
+.av .c{width:38px;height:38px;border-radius:50%;background:var(--line);display:grid;place-items:center;font-weight:800;color:var(--ink);position:relative}
+.av .c i{position:absolute;right:-3px;bottom:-3px;width:16px;height:16px;border-radius:50%;background:var(--panel);display:grid;place-items:center;font-style:normal;font-size:11px;border:1px solid var(--line)}
+.av.fed .c i{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.flame{font-weight:800;font-size:18px;color:var(--flame)}
+.shields{display:flex;gap:3px}.shields i{width:10px;height:12px;background:var(--shield);clip-path:polygon(50% 0,100% 20%,85% 100%,50% 100%,15% 100%,0 20%);display:block}
+.ring{width:40px;height:40px;border-radius:50%;background:conic-gradient(var(--accent) calc(var(--v)*1%),var(--line) 0);display:grid;place-items:center;position:relative}
+.ring::after{content:"";position:absolute;inset:5px;border-radius:50%;background:var(--panel)}
+.ring b{position:relative;font-family:var(--mono);font-size:11px}
+
+.banner{border-radius:14px;padding:10px 12px;font-weight:700;font-size:13px;display:flex;gap:8px;align-items:center}
+.banner.risk{background:color-mix(in srgb,var(--risk) 14%,var(--panel));color:var(--risk)}
+.banner.ok{background:color-mix(in srgb,var(--accent) 14%,var(--panel));color:var(--accent)}
+.answer{border-radius:10px;padding:8px 10px;background:var(--bg);font-size:14px}
+.answer b{font-size:12px;color:var(--muted);display:block}
+.prog{height:8px;border-radius:99px;background:var(--line);overflow:hidden}.prog i{display:block;height:100%;background:var(--accent);width:0;transition:width .4s}
+.treats{display:flex;gap:6px}.treats button{border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:4px 8px;font-size:16px}
+
+/* reveal overlay inside phone */
+.overlay{position:absolute;inset:0;background:color-mix(in srgb,var(--panel) 92%,transparent);display:none;place-items:center;text-align:center;padding:24px;z-index:5;border-radius:44px}
+.overlay.on{display:grid}
+.overlay .box{display:grid;gap:10px;justify-items:center}
+.overlay svg{width:180px;height:180px}
+.tier{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;padding:4px 10px;border-radius:99px;border:1px solid var(--line)}
+.tier.rare{color:var(--shield);border-color:var(--shield)}.tier.legendary{color:var(--flame);border-color:var(--flame)}.tier.shiny{background:linear-gradient(90deg,#f6d365,#fda085,#a1c4fd);color:#1a1a1a;border:0}
+
+/* ---------- simulator ---------- */
+.sim{display:grid;gap:16px}
+.sim .card{gap:10px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.sim .btn{padding:10px 12px;font-size:14px;border-radius:12px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:13px}
+.kv b{font-weight:700;color:var(--muted)}
+.kv span{font-family:var(--mono)}
+.widgets{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.widget{border-radius:22px;background:var(--bg);border:1px solid var(--line);aspect-ratio:1;padding:14px;display:flex;flex-direction:column;justify-content:space-between;max-width:170px}
+.widget.med{aspect-ratio:2.1;max-width:360px;grid-column:1/-1;flex-direction:row;align-items:center;gap:14px}
+.widget svg{width:56px;height:56px}
+.dots{display:flex;gap:6px;align-items:center}.dots i{width:10px;height:10px;border-radius:50%;background:var(--line);display:block}.dots i.on{background:var(--accent)}
+.lock{width:66px;height:66px;border-radius:50%;background:conic-gradient(var(--ink) calc(var(--f)*50%),var(--line) 0);display:grid;place-items:center;position:relative}
+.lock::after{content:"";position:absolute;inset:7px;border-radius:50%;background:var(--panel)}
+.lock svg{position:relative;width:30px;height:30px}
+.log{font-family:var(--mono);font-size:12px;max-height:180px;overflow:auto;display:grid;gap:2px;color:var(--muted)}
+.log div:first-child{color:var(--ink)}
+.legend{font-size:12px;color:var(--muted)}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <h1>Kelp</h1>
+    <p>A creature you can only raise together. Working prototype: the phone runs the real rules from the spec, the panel plays both people and the calendar.</p>
+  </header>
+
+  <div class="stage">
+    <div class="phone" id="phone">
+      <div class="notch"></div>
+      <div class="screen">
+
+        <section id="s-welcome" class="on">
+          <div class="center">
+            <div id="welcome-art"></div>
+            <div class="lead">A creature you can only raise together.</div>
+            <p class="muted small" style="margin:0 20px">It grows on the days you both show up. Miss a day and it waits. Nothing dies.</p>
+            <button class="btn" style="width:80%" onclick="go('mode')"> Continue with Apple</button>
+          </div>
+        </section>
+
+        <section id="s-mode">
+          <div class="s-title">Who are you raising it with?</div>
+          <button class="mode" onclick="pickMode('crew')"><span class="ic">🏃</span><div><b>Crew</b><span>A friend you're doing something hard with. Gym, study, sober, anything daily.</span></div></button>
+          <button class="mode" onclick="pickMode('couple')"><span class="ic">💛</span><div><b>Couple</b><span>Your person. Near or far.</span></div></button>
+          <div class="card"><h3>Your daily habit</h3>
+            <div class="row"><input id="habit" value="Gym" style="flex:1;font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:inherit;min-width:0" aria-label="Your habit"></div>
+            <p class="small muted">Manual tap, proof photo, or auto-fed from Apple Health. The demo uses manual.</p></div>
+        </section>
+
+        <section id="s-invite">
+          <div class="center">
+            <div id="egg-art" class="wobble"></div>
+            <div class="lead">The egg wakes when they join.</div>
+            <p class="muted small">Send the link. It works for 7 days.</p>
+            <button class="btn" style="width:80%" onclick="partnerJoins()">Send invite</button>
+            <p class="small muted" style="margin:0 24px">In the real app this opens the share sheet. Here, tapping it is Maya accepting.</p>
+          </div>
+        </section>
+
+        <section id="s-home">
+          <div class="row"><div class="s-title" id="h-title">Egg</div><span class="spacer"></span><span class="small muted mono" id="h-date"></span></div>
+          <div class="scene" id="scene"><div class="residents" id="residents"></div><div id="scene-art"></div><span class="pill" id="band-pill">normal</span><span class="cap" id="scene-cap"></span></div>
+          <div class="strip">
+            <div class="av" id="av-me"><div class="c">E<i>○</i></div>You</div>
+            <div class="av" id="av-pt"><div class="c">M<i>○</i></div>Maya</div>
+            <span class="spacer"></span>
+            <span class="flame">🔥 <span id="streak" class="mono">0</span></span>
+            <div class="shields" id="shields"></div>
+            <div class="ring" id="ring" style="--v:70"><b id="vit">70</b></div>
+          </div>
+          <div id="banner"></div>
+          <button class="btn" id="feed-btn" onclick="feed('me')">Feed · Gym</button>
+          <div class="card" id="bond">
+            <h3>Today's question</h3>
+            <p id="q"></p>
+            <div id="bond-body"></div>
+          </div>
+          <div class="card">
+            <h3>This week</h3>
+            <p id="exp-title">Both feed 5 of 7 days</p>
+            <div class="prog"><i id="exp-bar"></i></div>
+            <p class="small muted" id="exp-cap"></p>
+          </div>
+        </section>
+      </div>
+
+      <div class="overlay" id="overlay">
+        <div class="box">
+          <div id="ov-art"></div>
+          <div class="s-title" id="ov-title"></div>
+          <p class="muted" id="ov-text" style="margin:0"></p>
+          <div class="row" style="justify-content:center"><span class="tier" id="ov-tier"></span></div>
+          <button class="btn" style="width:200px" onclick="closeOverlay()">Keep going</button>
+        </div>
+      </div>
+    </div>
+
+    <aside class="sim">
+      <div class="card">
+        <h3>Play both people</h3>
+        <div class="grid2">
+          <button class="btn ghost" onclick="feed('me')">You feed</button>
+          <button class="btn ghost" onclick="feed('pt')">Maya feeds</button>
+          <button class="btn ghost" onclick="answer('me')">You answer</button>
+          <button class="btn ghost" onclick="answer('pt')">Maya answers</button>
+        </div>
+        <h3>Move time</h3>
+        <div class="grid2">
+          <button class="btn" onclick="endDay()">End the day</button>
+          <button class="btn ghost" onclick="fast(7,'both')">7 good days</button>
+          <button class="btn ghost" onclick="fast(1,'me')">A day only you feed</button>
+          <button class="btn ghost" onclick="fast(7,'none')">A week of nothing</button>
+          <button class="btn ghost" onclick="fast(100,'mostly')" title="Both fed ~90% of days, bond ~60%">Jump to day 100</button>
+          <button class="btn ghost" onclick="reset()">Start over</button>
+        </div>
+        <p class="legend">Rules in play: 03:00 day boundary, both-fed grows, shields every 7 clean days (cap 2), missed day burns a shield or opens a 48h restore, growth never decreases, 7 empty days hibernate, vitality is a 14-day mean, adult form from days 45 to 100.</p>
+      </div>
+
+      <div class="card">
+        <h3>Widgets, live</h3>
+        <div class="widgets">
+          <div class="widget" id="w-small"><div id="w-art"></div><div><div class="dots" id="w-dots"><i></i><i></i><span class="spacer"></span><span class="mono small" id="w-streak">🔥 0</span></div><div class="small muted" id="w-line">Nobody yet</div></div></div>
+          <div class="widget" style="display:grid;place-items:center"><div class="lock" id="lock" style="--f:0"><div id="lock-art"></div></div></div>
+          <div class="widget med"><div id="w-art2"></div><div style="min-width:0"><b id="w-name">Egg</b><div class="small muted" id="w-line2">Nobody yet</div><div class="small mono" id="w-vit">vitality 70</div></div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>State</h3>
+        <div class="kv">
+          <b>Day</b><span id="k-day">0</span>
+          <b>Growth</b><span id="k-growth">0</span>
+          <b>Stage</b><span id="k-stage">egg</span>
+          <b>Streak</b><span id="k-streak">0</span>
+          <b>Shields</b><span id="k-shields">0</span>
+          <b>Vitality</b><span id="k-vit">70</span>
+          <b>Sealed roll</b><span id="k-roll">?</span>
+        </div>
+        <div class="log" id="log"></div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<script>
+// ---------- rules (ported from supabase/functions/_shared/resolve.ts) ----------
+const RULES={shieldEvery:7,shieldCap:2,window:14,prior:70,hibernate:7,stages:{hatchling:3,juvenile:14,adolescent:45,adult:100}};
+function stageFor(g){return g>=100?'adult':g>=45?'adolescent':g>=14?'juvenile':g>=3?'hatchling':'egg'}
+function dayScore(state,bond,treats){const base={both_fed:65,shielded:30,restored:30,missed_one:20,missed_none:0}[state];return Math.min(100,base+(bond?25:0)+(treats?10:0))}
+function vitality(scores){const w=scores.slice(-RULES.window);const miss=RULES.window-w.length;return Math.round((w.reduce((a,b)=>a+b,0)+miss*RULES.prior)/RULES.window)}
+function band(v){return v>90?'glowing':v>=70?'bright':v>=40?'normal':'droopy'}
+let seed=Date.now()%100000;function rng(){seed=(seed*1664525+1013904223)%4294967296;return seed/4294967296}
+function roll(){const r=rng();const tier=r<.03?'legendary':r<.15?'rare':r<.40?'uncommon':'common';return{tier,shiny:rng()<.01,species:{common:'Otter',uncommon:'Hermit crab',rare:'Nudibranch',legendary:'Manta'}[tier]}}
+const PROMPTS={crew:["What's the one thing you have to do today, no matter what?","Did you do the thing? How did it actually feel?","What's the real reason you started this habit?","Send your crewmate one line to get them through today.","What's a habit of your crewmate's that you want to steal?","What's the last thing you laughed at?"],
+couple:["What did they do this week that you didn't thank them for?","What's the first thing you noticed about them?","What's one thing you want to do together this year?","What would they order at a diner at 2am?","What do you think I'm most stressed about right now?","What was the best part of today, in one line?"]};
+const SAMPLE_ANSWERS=["Leg day, before work.","Honestly? Barely.","Because you asked.","You've got this.","Their 6am alarm. Terrifying.","A dog in a raincoat."];
+
+// ---------- state ----------
+let S;
+function reset(){S={screen:'welcome',mode:'crew',habit:'Gym',day:0,growth:0,streak:0,atRisk:null,shields:0,emptyRun:0,hib:false,fedMe:false,fedPt:false,ansMe:null,ansPt:null,treat:false,scores:[],vitHist:[],states:[],roll:null,hatched:false,form:null,residents:[],weekBoth:0,log:[]};
+  document.getElementById('habit').value='Gym';go('welcome');render();log('New pair. Egg sealed, roll hidden until day 3.')}
+function log(m){S.log.unshift(`d${S.day} ${m}`);S.log=S.log.slice(0,40)}
+function go(s){S.screen=s;document.querySelectorAll('.screen>section').forEach(x=>x.classList.toggle('on',x.id==='s-'+s));render()}
+function pickMode(m){S.mode=m;S.habit=document.getElementById('habit').value||'Gym';S.roll=roll();go('invite');log(`Mode ${m}. Habit "${S.habit}".`)}
+function partnerJoins(){S.day=1;go('home');log('Maya joined. Day 1.')}
+function feed(who){if(S.screen!=='home')return;if(who==='me'){if(S.fedMe)return;S.fedMe=true;log('You fed.')}else{if(S.fedPt)return;S.fedPt=true;log('Maya fed.')}render()}
+function answer(who){if(S.screen!=='home')return;const a=SAMPLE_ANSWERS[(S.day+(who==='me'?0:3))%SAMPLE_ANSWERS.length];if(who==='me'){if(S.ansMe)return;S.ansMe=a}else{if(S.ansPt)return;S.ansPt=a}log(`${who==='me'?'You':'Maya'} answered.`);render()}
+function sendTreat(){S.treat=true;log('You sent Maya a treat.');render()}
+function restore(){if(!S.atRisk)return;S.streak=S.atRisk.streak;S.scores[S.scores.length-1]=dayScore('restored',S.atRisk.bond,S.atRisk.treat);S.states[S.states.length-1]='restored';S.atRisk=null;log('Streak restored.');render()}
+
+function endDay(silent){
+  if(S.screen!=='home')return;
+  const both=S.fedMe&&S.fedPt,any=S.fedMe||S.fedPt,bond=!!(S.ansMe&&S.ansPt);
+  let state;
+  if(both){state='both_fed';S.streak++;S.growth++;if(S.streak%RULES.shieldEvery===0&&S.shields<RULES.shieldCap){S.shields++;log('Shield earned.')}if(S.atRisk){S.atRisk=null}}
+  else if(S.shields>0){state='shielded';S.shields--;log('Missed. Shield used.')}
+  else if(S.streak>0){state='at_risk';S.atRisk={streak:S.streak,bond,treat:S.treat,until:S.day+2};S.streak=0;log('Missed with no shield. Streak paused, 48h to restore.')}
+  else state=any?'missed_one':'missed_none';
+  if(S.atRisk&&S.day>=S.atRisk.until&&state!=='both_fed'){S.atRisk=null;log('Restore window closed.')}
+  if(any){S.emptyRun=0;if(both)S.hib=false}else{S.emptyRun++;if(S.emptyRun>=RULES.hibernate&&!S.hib){S.hib=true;log('Seven empty days. Hibernating.')}}
+  const sc=dayScore(state==='at_risk'?(any?'missed_one':'missed_none'):state,bond,S.treat);
+  S.scores.push(sc);S.states.push(state);S.vitHist.push(vitality(S.scores));
+  if(both)S.weekBoth++;if(S.day%7===0)S.weekBoth=0;
+  const stage=stageFor(S.growth);
+  if(stage!=='egg'&&!S.hatched){S.hatched=true;if(!silent)showHatch()}
+  if(stage==='adult'&&!S.form){S.form=adultForm();S.residents.push({...S.roll,form:S.form});log(`Adult: ${S.form}. Moved into the habitat. New egg.`);if(!silent)showAdult();S.growth=0;S.hatched=false;S.form=null;S.roll=roll();S.vitHist=[];S.states=[]}
+  S.day++;S.fedMe=S.fedPt=false;S.ansMe=S.ansPt=null;S.treat=false;render()
+}
+function adultForm(){const n=S.vitHist.length,from=Math.max(0,n-55);const v=S.vitHist.slice(from),st=S.states.slice(from);const avg=v.reduce((a,b)=>a+b,0)/Math.max(1,v.length);const misses=st.filter(s=>s!=='both_fed').length;if(avg>85&&misses===0)return'secret';if(avg>85)return'radiant';if(avg>=50)return'standard';return'scrappy'}
+function fast(n,how){if(S.screen!=='home')return;for(let i=0;i<n;i++){if(how==='both'){S.fedMe=S.fedPt=true;S.ansMe=S.ansPt='x';S.treat=true}else if(how==='me'){S.fedMe=true}else if(how==='mostly'){const r=rng();S.fedMe=r<.95;S.fedPt=r<.90;if(rng()<.6){S.ansMe=S.ansPt='x'}if(rng()<.5)S.treat=true}endDay(true)}render()}
+
+// ---------- art ----------
+function otterSVG(o){ // o: {stage, band, hib, tier, shiny, form}
+  const scale={egg:0,hatchling:.62,juvenile:.78,adolescent:.9,adult:1}[o.stage]||1;
+  const fur=o.shiny?'#C9A7E8':o.tier==='legendary'?'#3E4F7A':o.tier==='rare'?'#D96A8E':o.tier==='uncommon'?'#C97C4A':'var(--otter)';
+  const light=o.shiny?'#F1E6FA':'var(--otter-light)';
+  if(o.stage==='egg')return `<svg viewBox="0 0 200 200" role="img" aria-label="Egg"><ellipse cx="100" cy="112" rx="58" ry="72" fill="var(--egg)" stroke="rgba(0,0,0,.08)" stroke-width="2"/><path d="M60 120q20-14 40 0t40 0" fill="none" stroke="rgba(120,90,40,.25)" stroke-width="6" stroke-linecap="round"/><circle cx="82" cy="80" r="6" fill="rgba(120,90,40,.2)"/><circle cx="122" cy="140" r="5" fill="rgba(120,90,40,.2)"/></svg>`;
+  const eyes=o.hib?`<path d="M80 92q8 6 16 0M104 92q8 6 16 0" stroke="#222" stroke-width="3" fill="none" stroke-linecap="round"/>`:`<circle cx="86" cy="92" r="5" fill="#222"/><circle cx="114" cy="92" r="5" fill="#222"/><circle cx="88" cy="90" r="1.6" fill="#fff"/><circle cx="116" cy="90" r="1.6" fill="#fff"/>`;
+  const kelp=o.form==='radiant'||o.form==='secret'?`<path d="M58 150q12-30 4-60M142 150q-12-30-4-60" stroke="#2E8C6A" stroke-width="7" fill="none" stroke-linecap="round" opacity=".9"/>`:'';
+  const crown=o.form==='secret'?`<path d="M80 48l8 10 12-16 12 16 8-10v14H80z" fill="#F2C94C"/>`:'';
+  return `<svg viewBox="0 0 200 200" role="img" aria-label="Otter"><g transform="translate(100 110) scale(${scale}) translate(-100 -110)">
+  ${kelp}
+  <ellipse cx="100" cy="150" rx="46" ry="38" fill="${fur}"/><ellipse cx="100" cy="156" rx="28" ry="26" fill="${light}"/>
+  <ellipse cx="62" cy="170" rx="14" ry="8" fill="${fur}" transform="rotate(-20 62 170)"/><ellipse cx="138" cy="170" rx="14" ry="8" fill="${fur}" transform="rotate(20 138 170)"/>
+  <circle cx="100" cy="92" r="42" fill="${fur}"/><circle cx="66" cy="66" r="10" fill="${fur}"/><circle cx="134" cy="66" r="10" fill="${fur}"/>
+  <ellipse cx="100" cy="106" rx="24" ry="18" fill="${light}"/>${eyes}
+  <ellipse cx="100" cy="104" rx="7" ry="5" fill="#2b2b2b"/><path d="M93 112q7 6 14 0" stroke="#2b2b2b" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M70 104h18M70 110h18M112 104h18M112 110h18" stroke="rgba(0,0,0,.35)" stroke-width="1.5"/>
+  ${crown}<ellipse cx="78" cy="150" rx="7" ry="5" fill="${light}"/><ellipse cx="122" cy="150" rx="7" ry="5" fill="${light}"/></g></svg>`;
+}
+
+// ---------- render ----------
+function render(){
+  const stage=stageFor(S.growth),v=vitality(S.scores),b=band(v),both=S.fedMe&&S.fedPt;
+  const art={stage,band:b,hib:S.hib,tier:S.roll?.tier,shiny:S.roll?.shiny,form:S.form};
+  document.getElementById('welcome-art').innerHTML=otterSVG({stage:'adult',band:'bright',tier:'common'}).replace('<svg','<svg style="width:150px;height:150px"');
+  document.getElementById('egg-art').innerHTML=otterSVG({stage:'egg'}).replace('<svg','<svg style="width:140px;height:140px"');
+  if(S.screen!=='home'){return}
+  document.getElementById('h-title').textContent=stage==='egg'?'Egg':(S.roll.shiny?'Shiny ':'')+S.roll.species;
+  document.getElementById('h-date').textContent=`Day ${S.day}`;
+  const sc=document.getElementById('scene');sc.className='scene '+(stage==='egg'?'normal':b);
+  document.getElementById('scene-art').innerHTML=otterSVG(art)+(S.hib?'<span class="zzz">z z z</span>':'');
+  document.getElementById('band-pill').textContent=S.hib?'hibernating':stage==='egg'?'incubating':b;
+  document.getElementById('scene-cap').textContent=stage==='egg'?`Hatches at 3 both-fed days · ${S.growth}/3`:`${stage} · growth day ${S.growth}`;
+  document.getElementById('residents').innerHTML=S.residents.map(r=>otterSVG({stage:'adult',band:'bright',tier:r.tier,shiny:r.shiny,form:r.form})).join('');
+  document.getElementById('av-me').className='av'+(S.fedMe?' fed':'');document.getElementById('av-pt').className='av'+(S.fedPt?' fed':'');
+  document.querySelector('#av-me i').textContent=S.fedMe?'✓':'○';document.querySelector('#av-pt i').textContent=S.fedPt?'✓':'○';
+  document.getElementById('streak').textContent=S.streak;
+  document.getElementById('shields').innerHTML='<i></i>'.repeat(S.shields);
+  document.getElementById('ring').style.setProperty('--v',v);document.getElementById('vit').textContent=v;
+  const bn=document.getElementById('banner');
+  if(S.atRisk)bn.innerHTML=`<div class="banner risk">We paused at ${S.atRisk.streak}. Restore within 48h? <span class="spacer"></span><button class="btn" style="width:auto;padding:6px 10px;font-size:12px;background:var(--risk);color:#fff" onclick="restore()">Restore</button></div>`;
+  else if(both)bn.innerHTML=`<div class="banner ok">Both fed. Growth tonight.</div>`;
+  else if(S.fedPt&&!S.fedMe)bn.innerHTML=`<div class="banner ok" style="color:var(--ink)">Maya fed me. No rush.</div>`;
+  else bn.innerHTML='';
+  const fb=document.getElementById('feed-btn');fb.textContent=S.fedMe?'Fed ✓':`Feed · ${S.habit}`;fb.disabled=S.fedMe;
+  document.getElementById('q').textContent=PROMPTS[S.mode][S.day%6];
+  const bb=document.getElementById('bond-body');
+  if(S.ansMe&&S.ansPt)bb.innerHTML=`<div class="answer"><b>You</b>${S.ansMe==='x'?'(answered)':S.ansMe}</div><div class="answer"><b>Maya</b>${S.ansPt==='x'?'(answered)':S.ansPt}</div>`;
+  else bb.innerHTML=`<div class="row"><button class="btn ghost" style="width:auto;padding:8px 12px;font-size:13px" onclick="answer('me')" ${S.ansMe?'disabled':''}>${S.ansMe?'You answered':'Answer'}</button><span class="small muted">${S.ansPt?'Maya answered. Reveal when you do.':'Waiting for Maya'}</span></div>`
+    +(S.fedPt&&!S.treat?`<div class="row small muted">Maya fed. Send a treat: <span class="treats"><button onclick="sendTreat()">🐟</button><button onclick="sendTreat()">🐚</button><button onclick="sendTreat()">⭐</button></span></div>`:'');
+  const wk=Math.min(5,S.weekBoth+(both?1:0));document.getElementById('exp-bar').style.width=(wk/5*100)+'%';document.getElementById('exp-cap').textContent=`${wk} of 5 · resets Monday`;
+  // widgets
+  document.getElementById('w-art').innerHTML=otterSVG(art);document.getElementById('w-art2').innerHTML=otterSVG(art);document.getElementById('lock-art').innerHTML=otterSVG({stage:stage==='egg'?'egg':'adult',tier:S.roll?.tier});
+  const dots=document.querySelectorAll('#w-dots i');dots[0].className=S.fedMe?'on':'';dots[1].className=S.fedPt?'on':'';
+  document.getElementById('w-streak').textContent='🔥 '+S.streak;
+  const line=both?'Both fed':S.fedPt?'Maya fed · you haven’t':S.fedMe?'You fed · waiting on Maya':'Nobody yet';
+  document.getElementById('w-line').textContent=line;document.getElementById('w-line2').textContent=line;
+  document.getElementById('w-name').textContent=document.getElementById('h-title').textContent;document.getElementById('w-vit').textContent='vitality '+v;
+  document.getElementById('lock').style.setProperty('--f',(S.fedMe?1:0)+(S.fedPt?1:0));
+  // state panel
+  const k=(id,val)=>document.getElementById(id).textContent=val;
+  k('k-day',S.day);k('k-growth',S.growth);k('k-stage',stage);k('k-streak',S.atRisk?`0 (paused ${S.atRisk.streak})`:S.streak);k('k-shields',S.shields);k('k-vit',`${v} · ${b}`);
+  k('k-roll',S.hatched?`${S.roll.tier}${S.roll.shiny?' · shiny':''}`:'sealed');
+  document.getElementById('log').innerHTML=S.log.map(l=>`<div>${l}</div>`).join('');
+}
+function showHatch(){const o=document.getElementById('overlay');document.getElementById('ov-art').innerHTML=otterSVG({stage:'hatchling',tier:S.roll.tier,shiny:S.roll.shiny});document.getElementById('ov-title').textContent=`It's a${/^[aeiou]/i.test(S.roll.species)?'n':''} ${S.roll.species.toLowerCase()}.`;document.getElementById('ov-text').textContent='Both of you see this at the same moment. Name it together.';const t=document.getElementById('ov-tier');t.className='tier '+(S.roll.shiny?'shiny':S.roll.tier);t.textContent=(S.roll.shiny?'shiny · ':'')+S.roll.tier;o.classList.add('on');log(`Hatched: ${S.roll.tier}${S.roll.shiny?' SHINY':''} ${S.roll.species}.`)}
+function showAdult(){const r=S.residents.at(-1);const o=document.getElementById('overlay');document.getElementById('ov-art').innerHTML=otterSVG({stage:'adult',tier:r.tier,shiny:r.shiny,form:r.form});document.getElementById('ov-title').textContent=`Day 100. ${r.form[0].toUpperCase()+r.form.slice(1)} form.`;document.getElementById('ov-text').textContent={scrappy:'Been through it. Still here. Moves into the habitat.',standard:'A proper adult. Moves into the habitat.',radiant:'Raised well. Wrapped in kelp. Moves into the habitat.',secret:'Not one missed day. Nobody else will have this one.'}[r.form];const t=document.getElementById('ov-tier');t.className='tier '+(r.form==='secret'?'legendary':r.form==='radiant'?'rare':'');t.textContent=r.form;o.classList.add('on')}
+function closeOverlay(){document.getElementById('overlay').classList.remove('on')}
+reset();
+</script>
