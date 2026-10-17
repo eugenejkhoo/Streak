@@ -270,3 +270,22 @@ All need a trademark and App Store search before committing. Not checked here.
 | Tether | Connected across distance. Good for long-distance couples. | Tether is a crypto stablecoin. Avoid. |
 
 Tagline either way: **"A creature you can only raise together."**
+
+### More name candidates (round 2)
+
+Asked for names that sound good and roll off the tongue. One or two syllables, soft consonants, easy to say in "did you do your ___ today?". Trademark and App Store checks still needed on all of them.
+
+| Name | Say it | Why it fits | Watch out |
+|---|---|---|---|
+| **Raft** | one syllable, closed, confident | a raft of otters holding on to each other | generic word, see round 1 |
+| **Tend** | one syllable, warm verb | "tend to it", works equally for crew and couple, says care without saying pet | Tend is a US dental chain brand |
+| **Pebble** | two soft syllables, playful | otters keep one favourite rock in a pouch for life. Also what you crack shells with, so it reads "small, kept, useful" | Pebble smartwatch brand was revived in 2025 |
+| **Kelp** | one syllable, bouncy | what otters wrap in so they do not drift apart | obscure to non-otter people, sounds a bit like a food app |
+| **Nuzzle** | two syllables, very soft | the affection gesture itself, instantly warm | leans couple, may feel too cute for crews |
+| **Holdfast** | two syllables, firm | kelp's anchor, and literally hold firmly | serious tone, harder icon |
+| **Bask** | one syllable, relaxed | otters bask in rafts, implies rest and reward | less about "together" |
+| **Twofold** | two syllables, rhythmic | says two, says growth, no animal needed | slightly corporate |
+
+Ranking by sound plus meaning: Raft, Tend, Pebble, Kelp, Nuzzle. If Raft fails clearance, take Tend.
+
+Default creature name for the mascot otter: **Pip**. One syllable, works in every sentence the creature says.

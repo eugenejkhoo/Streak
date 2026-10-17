@@ -1,0 +1,722 @@
+[
+  {
+    "mode": "couple",
+    "pack": "appreciate",
+    "text": "What did they do this week that you didn't thank them for?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "appreciate",
+    "text": "What's a small thing they do that you'd miss if it stopped?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "appreciate",
+    "text": "When did they last make you feel looked after?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "appreciate",
+    "text": "What's your favourite thing about how they talk?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "appreciate",
+    "text": "What's something they're good at that they don't give themselves credit for?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "appreciate",
+    "text": "What did they do today that made things easier for you?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "appreciate",
+    "text": "What's a habit of theirs you secretly love?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "appreciate",
+    "text": "When did they last make you laugh really hard?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "appreciate",
+    "text": "What's one thing they taught you?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "appreciate",
+    "text": "What do they do when you're sick that you never mention?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "appreciate",
+    "text": "What's the kindest thing they've done for someone else?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "appreciate",
+    "text": "What part of their routine do you find weirdly attractive?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "appreciate",
+    "text": "When did you last feel proud of them?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "appreciate",
+    "text": "What's something they said that you still think about?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "appreciate",
+    "text": "Which of their flaws have you come to love?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "appreciate",
+    "text": "What's a way they've changed that you're grateful for?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "appreciate",
+    "text": "Describe their laugh to someone who's never heard it.",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "appreciate",
+    "text": "What do they put up with from you that you know is annoying?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "appreciate",
+    "text": "What's your favourite thing they cook or order?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "appreciate",
+    "text": "Tell them one thing you've been meaning to say.",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "remember",
+    "text": "What's the first thing you noticed about them?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "remember",
+    "text": "Describe your first date in three words.",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "remember",
+    "text": "What's a moment early on when you thought \"oh, this is going to work\"?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "remember",
+    "text": "What's the best trip you've taken together, and why that one?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "remember",
+    "text": "What's an inside joke only you two get?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "remember",
+    "text": "What's a meal you'll never forget sharing?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "remember",
+    "text": "What song is yours, and how did it become yours?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "remember",
+    "text": "What's the worst argument you've had, and what fixed it?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "remember",
+    "text": "When did you last stay up too late talking?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "remember",
+    "text": "What's a gift they gave you that you still think about?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "remember",
+    "text": "What's something that scared you both and you got through?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "remember",
+    "text": "What's the funniest thing that's happened to you two in public?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "remember",
+    "text": "What's your favourite photo of the two of you? Send it.",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "remember",
+    "text": "What's a place that's yours now because of them?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "remember",
+    "text": "When did you first say the big thing?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "remember",
+    "text": "What's a tiny moment that felt huge at the time?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "remember",
+    "text": "What did you first disagree about?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "remember",
+    "text": "What's a tradition you've accidentally created?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "remember",
+    "text": "What did their family say about you first?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "remember",
+    "text": "What's a memory of them you'd keep if you could only keep one?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "ahead",
+    "text": "What's one thing you want to do together this year?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "ahead",
+    "text": "Where do you want to wake up on a random Tuesday in five years?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "ahead",
+    "text": "What's a skill you want to learn side by side?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "ahead",
+    "text": "What's a trip that's been on the list too long?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "ahead",
+    "text": "What's something you want to get better at for them?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "ahead",
+    "text": "What do you hope never changes between you?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "ahead",
+    "text": "What would your perfect ordinary Sunday look like at 60?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "ahead",
+    "text": "What's one thing you want to stop doing as a couple?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "ahead",
+    "text": "What's a project you want to build together, even a small one?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "ahead",
+    "text": "Describe the home you'd want if money didn't matter.",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "ahead",
+    "text": "What tradition do you want to start before the year ends?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "ahead",
+    "text": "What's a hard conversation you want to have gently, sometime?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "ahead",
+    "text": "What are you looking forward to most this month?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "ahead",
+    "text": "What's one thing you want them to remember about you when you're old?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "ahead",
+    "text": "What's a fear about the future you haven't said out loud?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "ahead",
+    "text": "What's a name you'd give a pet you don't have yet?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "ahead",
+    "text": "What would you do with a free weekend and no plans?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "ahead",
+    "text": "What's one thing you want to be braver about, together?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "ahead",
+    "text": "What's the next thing you want to celebrate?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "ahead",
+    "text": "Finish this: \"Next year, I hope we...\"",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "play",
+    "text": "Send them your current face as a selfie, no fixing it.",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "play",
+    "text": "What's their most attractive habit that isn't physical?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "play",
+    "text": "Rate their flirting out of 10. Be fair.",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "play",
+    "text": "What's a nickname you'd never use in public?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "play",
+    "text": "What would they order at a diner at 2am?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "play",
+    "text": "Which fictional couple are you two?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "play",
+    "text": "What's a dance move they do that you'd pay to see again?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "play",
+    "text": "What outfit of theirs do you want to see more of?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "play",
+    "text": "What's something you'd dare them to do this week?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "play",
+    "text": "Photo of something that reminded you of them today.",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "play",
+    "text": "What's their best bad joke?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "play",
+    "text": "Describe them as a drink.",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "play",
+    "text": "What's a thing they do that's objectively cute and they'd deny it?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "play",
+    "text": "Plan a fake heist. What's their role?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "play",
+    "text": "What's the pettiest thing you'd argue about and still enjoy?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "play",
+    "text": "What's their love language, and what's yours? Guess theirs.",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "play",
+    "text": "Give them a superhero name based on something they did this week.",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "play",
+    "text": "What's a song you'd want to slow dance to in the kitchen?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "play",
+    "text": "What do you want them to make you for breakfast?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "play",
+    "text": "Send the emoji that sums them up today.",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "knowme",
+    "text": "What do you think I'm most stressed about right now?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "knowme",
+    "text": "Guess my favourite thing we did together this month.",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "knowme",
+    "text": "What's one thing I complain about that you've stopped hearing?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "knowme",
+    "text": "What do you think I need more of from you?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "knowme",
+    "text": "Guess what I'd buy with a surprise $200.",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "knowme",
+    "text": "What do you think I'm proudest of this year?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "knowme",
+    "text": "What do you think I find hardest about us?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "knowme",
+    "text": "Guess my comfort show.",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "knowme",
+    "text": "What do you think I worry about that I don't say?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "knowme",
+    "text": "What's one thing you think I'd change about my job?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "knowme",
+    "text": "Guess my favourite thing about your body.",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "knowme",
+    "text": "What do you think I'd do with a day totally alone?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "knowme",
+    "text": "What do you think my love language actually is?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "knowme",
+    "text": "Guess what I'd want for my next birthday.",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "knowme",
+    "text": "What do you think I'm avoiding right now?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "knowme",
+    "text": "What's one thing you think I'd never admit I like?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "knowme",
+    "text": "Guess my favourite memory of you from this year.",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "knowme",
+    "text": "What do you think I'd say is your best quality?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "knowme",
+    "text": "What do you think I'd want to be doing in ten years?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "knowme",
+    "text": "Guess the last thing I cried at.",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "today",
+    "text": "What was the best part of today, in one line?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "today",
+    "text": "What did you eat today that you want to tell me about?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "today",
+    "text": "What's one thing that annoyed you today?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "today",
+    "text": "Photo of your view right now.",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "today",
+    "text": "What did you think about on the way home?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "today",
+    "text": "What are you wearing right now? Honest answer.",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "today",
+    "text": "What's something you did today you'd want them to see?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "today",
+    "text": "Rate your day 1 to 10, and what would have made it one higher.",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "today",
+    "text": "What did you listen to today?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "today",
+    "text": "What's one thing you wish you'd said to someone today?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "today",
+    "text": "What's the last thing that made you smile?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "today",
+    "text": "What are you doing in the next hour?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "today",
+    "text": "What do you need tonight: space, a hug, food, or a plan?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "today",
+    "text": "Who did you talk to today that I don't know?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "today",
+    "text": "What's a small win from today?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "today",
+    "text": "Where did you waste time today?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "today",
+    "text": "What's on your mind right now that isn't about us?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "today",
+    "text": "Did you drink enough water today? Be honest.",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "today",
+    "text": "What's one thing you're looking forward to tomorrow?",
+    "active": true
+  },
+  {
+    "mode": "couple",
+    "pack": "today",
+    "text": "Send me the last photo you took today.",
+    "active": true
+  }
+]

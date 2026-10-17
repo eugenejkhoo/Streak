@@ -1,0 +1,12 @@
+{
+  "name": "raft",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "description": "A creature you can only raise together. Server-side domain logic and Supabase project.",
+  "scripts": {
+    "test": "node --test \"tests/*.test.ts\"",
+    "prompts:build": "python3 -I scripts/build_prompts.py"
+  },
+  "engines": { "node": ">=22.18" }
+}
