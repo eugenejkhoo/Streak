@@ -35,6 +35,7 @@ A creature you can only raise together. Two people, one creature. It grows only 
 npm test                 # Node 22.18+, no dependencies
 npm run prompts:build    # regenerate content/prompts and supabase/seed_prompts.sql from docs/04
 ./scripts/pg_check.sh    # needs Postgres 16 binaries and a postgres OS user
+node scripts/record-demo.mjs out/   # records prototype walkthrough to out/kelp-demo.mp4 (needs playwright + ffmpeg)
 ```
 
 The migration has been applied end to end against Postgres 16 locally, including `commit_pair_day()` and the row-level-security policies. Supabase's `auth` schema and `pg_cron` are stubbed for that check.
